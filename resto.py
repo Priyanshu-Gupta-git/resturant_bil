@@ -26,22 +26,25 @@ for i in range(1,7):
         print("--",end=":")
 order_total = 0
 while True:
-    item = input("Enter the name of the item you want to order or (type 'exit' to finish ):").upper()
+    print("\033[91;107m","*"*50)
+    item = input("Enter the name of the item you want to order or (type 'exit' to finish :").upper()
     
     if item == 'EXIT':
         break
     elif item in menu:
         order_total += menu[item]
-        print(f"\033[103mYour item {item} has been added to your order. Current total:₹{order_total}\033[0m")
+        print(f"\033[103m\033[A\033[2kYour item {item} has been added to your order. Current total:₹{order_total}\033[0m")
     else:
-        print(f"\033[1;103mSorry, {item} is not  available yet.\033[0m")
-
+        print(f"\033[1;103m\033[A\033[2kSorry, {item} is not  available yet.\033[0m")
+print("\033[2J\033[H")
+print("\033[A\033[H ")
 for i in range(1,7):
     for j in range(1,6):
         print("--",end=":")
     
-print(f"\n\033[46Your final order total Amount is: ₹{order_total}. Thank you for dining with us!\033[0m")
+print(f"\n\033[46mYour final order total Amount is: ₹{order_total}. Thank you for dining with us!\033[0m")
 print(now.strftime("\033[1;91;103m Date  %d-%B-%Y \n  Time %H:%M:%S \\ Day- %A\033[0m"))
+print("\033[91;41m","*"*50)
 for i in range(1,7):
     for j in range (1,6):
         print("--",end=":")
