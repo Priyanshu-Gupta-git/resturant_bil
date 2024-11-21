@@ -1,5 +1,6 @@
 # resturant_bil
-#3 Restaurant Ordering System
+## Restaurant Ordering System
+
 This is a simple restaurant ordering system program written in Python. The program allows users to view a menu, place orders by selecting items, and see their total bill. It also displays the current date and time at the end of the session.
 
 ## Features
